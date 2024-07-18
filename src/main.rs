@@ -2,6 +2,7 @@ use crate::closures::use_closures;
 use crate::error_handling::error_handling;
 use crate::hash_maps::working_with_hashmaps;
 use crate::iterators::use_iterators;
+use crate::smart_pointers::use_smart_pointers;
 use crate::types_traits_lifetimes::ttl;
 use crate::vectors::working_with_vectors;
 
@@ -9,6 +10,7 @@ mod closures;
 mod error_handling;
 mod hash_maps;
 mod iterators;
+mod smart_pointers;
 mod types_traits_lifetimes;
 mod vectors;
 
@@ -29,7 +31,8 @@ fn main() {
     // error_handling();
     // ttl::ttl_global();
     // use_closures::build();
-    use_iterators::build();
+    // use_iterators::build();
+    use_smart_pointers::build();
 }
 
 /* >>> Enums <<< */
