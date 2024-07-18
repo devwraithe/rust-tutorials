@@ -5,6 +5,7 @@ use crate::iterators::use_iterators;
 use crate::smart_pointers::use_smart_pointers;
 use crate::types_traits_lifetimes::ttl;
 use crate::vectors::working_with_vectors;
+use crate::fearless_concurrency::use_fearless_concurrency;
 
 mod closures;
 mod error_handling;
@@ -13,6 +14,7 @@ mod iterators;
 mod smart_pointers;
 mod types_traits_lifetimes;
 mod vectors;
+mod fearless_concurrency;
 
 fn main() {
     // data_types();
@@ -32,7 +34,8 @@ fn main() {
     // ttl::ttl_global();
     // use_closures::build();
     // use_iterators::build();
-    use_smart_pointers::build();
+    // use_smart_pointers::build();
+    use_fearless_concurrency::build();
 }
 
 /* >>> Enums <<< */
