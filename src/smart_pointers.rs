@@ -39,13 +39,11 @@ pub mod use_smart_pointers {
         max: usize,
     }
 
-
     #[derive(Debug)]
     enum List {
         Cons(i32, RefCell<Rc<List>>),
         Nil,
     }
-
 
     #[derive(Debug)]
     struct Node {

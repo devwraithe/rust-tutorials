@@ -1,6 +1,6 @@
 pub mod use_fearless_concurrency {
     use std::rc::Rc;
-    use std::sync::{Arc, mpsc, Mutex};
+    use std::sync::{mpsc, Arc, Mutex};
     use std::thread;
     use std::time::Duration;
 
@@ -20,9 +20,9 @@ pub mod use_fearless_concurrency {
         }
 
         handle.join().unwrap(); // blocks the thread currently running until the thread represented by the handle terminates
-        // Blocking a thread means that thread is prevented from performing work or exiting.
+                                // Blocking a thread means that thread is prevented from performing work or exiting.
 
-        let v = vec![1,2,3];
+        let v = vec![1, 2, 3];
 
         let handle1 = thread::spawn(move || {
             println!("Here's a vector: {v:?}");
@@ -34,7 +34,8 @@ pub mod use_fearless_concurrency {
         let (tx, rx) = mpsc::channel();
         let tx1 = tx.clone();
 
-        thread::spawn(move || { // transmitter
+        thread::spawn(move || {
+            // transmitter
             let vals = vec![
                 String::from("hi"),
                 String::from("from"),
@@ -47,7 +48,8 @@ pub mod use_fearless_concurrency {
             }
         });
 
-        thread::spawn(move || { // transmitter clone, runs simultaneously with the original
+        thread::spawn(move || {
+            // transmitter clone, runs simultaneously with the original
             let vals = vec![
                 String::from("more"),
                 String::from("messages"),
